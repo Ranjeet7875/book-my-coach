@@ -1,6 +1,6 @@
 # Book My Coach - Seat Booking API
 
-A Node.js Express API for booking seats on a coach/bus. This application allows users to sign up, login, view available seats, book seats, suggest optimal seat arrangements, and manage their bookings.
+A Node.js Express API for booking seats on a coach. This application allows users to sign up, login, view available seats, book seats, suggest optimal seat arrangements, and manage their bookings.
 
 ## Features
 
