@@ -29,7 +29,7 @@ A Node.js Express API for booking seats on a coach. This application allows user
 
 1. **Clone the repository**
    ```
-   git clone https://github.com/yourusername/book-my-coach.git
+   git clone https://github.com/Ranjeet7875/book-my-coach.git
    cd book-my-coach
    ```
 
