@@ -10,7 +10,7 @@ import './App.css'
 const App = () => {
   return (
     <Router>
-      <Navbar />  {/* Add Navbar here */}
+      <Navbar /> 
       <Routes>
         <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />

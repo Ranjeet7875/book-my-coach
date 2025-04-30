@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Seatbook.css'; // We'll keep your existing CSS
+import './Seatbook.css'; 
 
 const TrainSeatBooking = () => {
   const [seats, setSeats] = useState([]);
@@ -7,7 +7,7 @@ const TrainSeatBooking = () => {
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
   const [loading, setLoading] = useState(true);
-  const [userId, setUserId] = useState('user123'); // Simulated user ID
+  const [userId, setUserId] = useState('user123'); 
   const [suggestedSeats, setSuggestedSeats] = useState([]);
   const [previewMode, setPreviewMode] = useState(false);
 
@@ -27,17 +27,6 @@ const TrainSeatBooking = () => {
         bookedBy: null
       });
     }
-    
-    // For demonstration, mark some seats as booked
-    const bookedSeatNumbers = [6, 7, 19, 20, 21, 27, 35, 41, 42, 47, 48, 49, 55, 56, 63];
-    
-    bookedSeatNumbers.forEach(num => {
-      const index = initialSeats.findIndex(s => s.seatNumber === num);
-      if (index !== -1) {
-        initialSeats[index].booked = true;
-        initialSeats[index].bookedBy = 'otherUser';
-      }
-    });
     
     setSeats(initialSeats);
     setSuggestedSeats([]);
