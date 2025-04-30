@@ -1,12 +1,17 @@
-# Book My Coach - Seat Booking API
+# Book My Coach - Seat Booking Application
 
-A Node.js Express API for booking seats on a coach. This application allows users to sign up, login, view available seats, book seats, suggest optimal seat arrangements, and manage their bookings.
+A full-stack seat booking application for coach/bus travel. This application allows users to sign up, login, view available seats, book seats, get optimal seat suggestions, and manage their bookings.
+
+## Live Demo
+
+- **Frontend**: [https://myseatbook11.netlify.app/](https://myseatbook11.netlify.app/)
+- **Backend API**: [https://railwayseat.onrender.com](https://railwayseat.onrender.com)
 
 ## Features
 
 - User authentication (signup/login)
 - JWT-based authorization
-- View all seats with availability status
+- View all seats with availability status 
 - Book up to 7 seats at once
 - Smart seat suggestion algorithm based on seat count
 - Cancel user bookings
@@ -14,9 +19,13 @@ A Node.js Express API for booking seats on a coach. This application allows user
 
 ## Technology Stack
 
+- **Frontend**: HTML, CSS, JavaScript (React.js assumed)
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose
 - **Authentication**: JWT, bcrypt
+- **Deployment**: 
+  - Backend: Render
+  - Frontend: Netlify
 
 ## Installation and Setup
 
@@ -25,7 +34,7 @@ A Node.js Express API for booking seats on a coach. This application allows user
 - Node.js (v12 or higher)
 - MongoDB (local installation or MongoDB Atlas)
 
-### Steps to Set Up
+### Backend Setup
 
 1. **Clone the repository**
    ```
@@ -57,28 +66,60 @@ A Node.js Express API for booking seats on a coach. This application allows user
 
 5. **The server will start running at**: `http://localhost:4000`
 
+### Frontend Setup
+
+To run the frontend locally:
+
+1. Navigate to the frontend directory (if using a monorepo structure)
+   ```
+   cd frontend
+   ```
+
+2. Install dependencies
+   ```
+   npm install
+   ```
+
+3. Start the development server
+   ```
+   npm start
+   ```
+
+4. Access the application at `http://localhost:3000`
+
 ## Project Structure
 
 ```
 book-my-coach/
-├── config/
-│   └── db.js
-├── middlewares/
-│   └── auth.middleware.js
-├── models/
-│   ├── seat.model.js
-│   └── user.model.js
-├── routes/
-│   ├── seat.route.js
-│   └── user.route.js
-├── .env
-├── .gitignore
-├── index.js
-├── package.json
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   ├── middlewares/
+│   │   └── auth.middleware.js
+│   ├── models/
+│   │   ├── seat.model.js
+│   │   └── user.model.js
+│   ├── routes/
+│   │   ├── seat.route.js
+│   │   └── user.route.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── index.js
+│   └── package.json
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── README.md
 └── README.md
 ```
 
 ## API Documentation
+
+### Base URL
+
+- Local: `http://localhost:4000`
+- Production: `https://railwayseat.onrender.com`
 
 ### Authentication Endpoints
 
@@ -292,6 +333,27 @@ book-my-coach/
   }
   ```
 
+## Usage Instructions
+
+1. **Registration/Login**:
+   - Create a new account or login with existing credentials
+   - A JWT token will be provided upon successful login
+
+2. **View Seats**:
+   - After login, you can view all available seats in the coach
+   - Booked seats will be clearly marked
+
+3. **Book Seats**:
+   - Select up to 7 seats at once
+   - Confirm your booking
+
+4. **Get Seat Suggestions**:
+   - Use the suggest feature to get optimal seat arrangements
+   - Specify the number of seats (1-7) you need
+
+5. **Cancel Bookings**:
+   - Cancel all your current bookings if needed
+
 ## Seat Algorithm
 
 The seat suggestion algorithm prioritizes:
@@ -316,3 +378,8 @@ The seat suggestion algorithm prioritizes:
 ## License
 
 This project is licensed under the MIT License.
+
+## Developer Contact
+
+For any questions or suggestions, please contact:
+- GitHub: [Ranjeet7875](https://github.com/Ranjeet7875)
