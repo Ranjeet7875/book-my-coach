@@ -47,7 +47,7 @@ A Node.js Express API for booking seats on a coach. This application allows user
 
 4. **Start the server**
    ```
-   npm start
+   npm run start
    ```
 
    For development with auto-restart:
